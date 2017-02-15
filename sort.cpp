@@ -22,7 +22,7 @@ int main()
   string input;
   //int result;
 
-   cout<<"Welcome to \"search it\". We first need some input data."<<endl;
+   cout<<"Welcome to \"sort it\". We first need some input data."<<endl;
    cout<<"We'll assume the inputs do not have any spaces."<<endl<<endl;
    cout<<"To end input type the #-character (followed by Enter)"<<endl<<endl;
 
@@ -44,10 +44,16 @@ int main()
  
   for (unsigned int x=0; x<inputs.size(); x++) {
 	  insertionSort(inputs);
-	  cout << inputs[x] << endl;
+	  if (x % 20000 == 0) {
+		  cout << endl << x << " passes completed" << endl;
+		  cout << inputs[x] << endl;
+	  }
+	  else {
+		  cout << inputs[x] << endl;
+	  }
   }
   
-   //cout<<endl<<"To end input type the #-character (followed by Enter)"<<endl<<endl;
+   cout<<endl<<"To end input type the #-character (followed by Enter)"<<endl<<endl;
   //cout<<"Enter a value to search for: ";
 
 
